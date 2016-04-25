@@ -17,3 +17,11 @@ github_username:  cenkce
 
 # Build settings
 markdown: kramdown
+gems:
+- jekyll-autoprefixer
+- jekyll-minifier
+autoprefixer:
+  browsers:
+  - last 3 versions
+jekyll-minifier:
+  exclude: 'atom.xml' # Exclude files from processing - file name, glob pattern or array of file names and glob patterns

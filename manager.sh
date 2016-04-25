@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
-IMAGE_NAME="jekyll/jekyll"
+IMAGE_NAME="nullcappone/jekyll"
 PORT="4000"
+CONTAINER_NAME="cenkce_blog"
 
 log() {
   echo "$1"
@@ -63,13 +64,17 @@ containerip(){
 
 enter(){
     log "entering to container"
-    docker exec -it $1 bash
+    docker exec -it $CONTAINER_NAME bash
 }
 
 start(){
     log "docker container is starting"
-    docker run -it --rm -p $PORT:$PORT -v $(pwd):/srv/www $IMAGE_NAME
+    docker run -it --rm -p $PORT:$PORT -v $(pwd):/srv/jekyll --name $CONTAINER_NAME $IMAGE_NAME
     check
+}
+
+stop(){
+    docker stop $CONTAINER_NAME
 }
 
 build(){
