@@ -1,0 +1,6 @@
+{
+  "name": "Cenkce.GitHub.io",
+  "tagline": "blog javascript DDD angularjs reactjs flux nodejs",
+  "body": "## Action Rollback Pattern Using Event Objects\r\n\r\nWhen fires an event using event-emitter, ",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
